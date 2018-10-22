@@ -12,21 +12,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val items = ArrayList<String>()
-        items.add("Tom")
-        items.add("Manu")
-        items.add("Julia")
-        items.add("Birgit")
-        items.add("Tom")
-        items.add("Manu")
-        items.add("Julia")
-        items.add("Birgit")
-        items.add("Tom")
-        items.add("Manu")
-        items.add("Julia")
-        items.add("Birgit")
+        val items = ArrayList<Person>()
+        items.add(Person("Tom", alter = 25, note = "Was"))
+        items.add(Person("Fritz", alter = 10, note = "Was"))
+        items.add(Person("Joe", alter = 34, note = "Was"))
+        items.add(Person("Jim", alter = 4, note = "Was"))
+        items.add(Person("Sue", alter = 23, note = "Was"))
+        items.add(Person("Nadja", alter = 56, note = "Was"))
+        items.add(Person("Emma", alter = 43, note = "Was"))
+        items.add(Person("Birgit", alter = 25, note = "Was"))
+        items.add(Person("Jakob", alter = 12, note = "Was"))
+        items.add(Person("Wolle", alter = 32, note = "Was"))
+        items.add(Person("Ed", alter = 43, note = "Was"))
 
-        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items )
+
+        val adapter = ArrayAdapter<Person>(this, android.R.layout.simple_list_item_1, items )
         kontaktListe.adapter = adapter
 /* Gibt eine Fehlermedlung da setOnClickListener nicht auf Adapter angewendet werden können
         kontaktListe.setOnClickListener {
