@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 */
+        //setOnItemClickListener ist die Lösung für diese Listengeschichte
         kontaktListe.setOnItemClickListener { parent, view, position, id ->
             Toast.makeText(this, "Geklickt wurde: $position", Toast.LENGTH_LONG).show()
         }
