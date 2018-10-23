@@ -25,6 +25,7 @@ class EigenerAdapter(context: Context, items: ArrayList<Person>):BaseAdapter(){
         val tNote = listeneintrag.findViewById<TextView>(R.id.textViewNote)
 
         tName.text = items.get(position).name
+        tName.setTextColor(items.get(position).farbe)
         tAlter.text = items.get(position).alter.toString()
         tNote.text = items.get(position).note
 
