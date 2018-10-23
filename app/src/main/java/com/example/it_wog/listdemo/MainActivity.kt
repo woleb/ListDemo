@@ -1,5 +1,6 @@
 package com.example.it_wog.listdemo
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -12,17 +13,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val items = ArrayList<Person>()
-        items.add(Person("Tom", alter = 25, note = "Was"))
-        items.add(Person("Fritz", alter = 10, note = "Was"))
-        items.add(Person("Joe", alter = 34, note = "Was"))
-        items.add(Person("Jim", alter = 4, note = "Was"))
-        items.add(Person("Sue", alter = 23, note = "Was"))
-        items.add(Person("Nadja", alter = 56, note = "Was"))
-        items.add(Person("Emma", alter = 43, note = "Was"))
-        items.add(Person("Birgit", alter = 25, note = "Was"))
-        items.add(Person("Jakob", alter = 12, note = "Was"))
-        items.add(Person("Wolle", alter = 32, note = "Was"))
-        items.add(Person("Ed", alter = 43, note = "Was"))
+        items.add(Person("Tom", alter = 25, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Fritz", alter = 10, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Joe", alter = 34, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Jim", alter = 4, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Sue", alter = 23, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Nadja", alter = 56, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Emma", alter = 43, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Birgit", alter = 25, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Jakob", alter = 12, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Wolle", alter = 32, note = "Was", farbe = Color.parseColor("#6A5ACD")))
+        items.add(Person("Ed", alter = 43, note = "Was", farbe = Color.parseColor("#6A5ACD")))
 
 
         //val adapter = ArrayAdapter<Person>(this, android.R.layout.simple_list_item_1, items )
