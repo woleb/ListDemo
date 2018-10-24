@@ -45,6 +45,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Geklickt wurde: ${items.get(position)}", Toast.LENGTH_LONG).show()
             //expliziten Intent erstellt der eine zweite Activity erzeugt beim Click auf einen Namen der Liste
             val detailIntent = Intent(this, DetailActivity::class.java)
+            detailIntent.putExtra("userName",items.get(position).name)
+            detailIntent.putExtra("userAlter",items.get(position).alter.toString())
+            detailIntent.putExtra("userNote",items.get(position).note)
+            detailIntent.putExtra("userColor",items.get(position).farbe.toString())
             startActivity(detailIntent)
         }
 
