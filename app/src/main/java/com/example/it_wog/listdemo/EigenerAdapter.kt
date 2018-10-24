@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 
 class EigenerAdapter(context: Context, items: ArrayList<Person>):BaseAdapter(){
@@ -23,11 +24,13 @@ class EigenerAdapter(context: Context, items: ArrayList<Person>):BaseAdapter(){
         val tName = listeneintrag.findViewById<TextView>(R.id.textViewName)
         val tAlter = listeneintrag.findViewById<TextView>(R.id.textViewAlter)
         val tNote = listeneintrag.findViewById<TextView>(R.id.textViewNote)
+        val tPic = listeneintrag.findViewById<ImageView>(R.id.pic)
 
         tName.text = items.get(position).name
         tName.setTextColor(items.get(position).farbe)
         tAlter.text = items.get(position).alter.toString()
         tNote.text = items.get(position).note
+        tPic.setImageDrawable(items.get(position).pic)
 
         return listeneintrag
     }
