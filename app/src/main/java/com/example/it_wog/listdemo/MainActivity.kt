@@ -1,5 +1,6 @@
 package com.example.it_wog.listdemo
 
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -42,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         //setOnItemClickListener ist die Lösung für diese Listengeschichte
         kontaktliste.setOnItemClickListener { parent, view, position, id ->
             Toast.makeText(this, "Geklickt wurde: ${items.get(position)}", Toast.LENGTH_LONG).show()
+            //expliziten Intent erstellt der eine zweite Activity erzeugt beim Click auf einen Namen der Liste
+            val detailIntent = Intent(this, DetailActivity::class.java)
+            startActivity(detailIntent)
         }
 
 
